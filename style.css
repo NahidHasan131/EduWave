@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    /* font-family: "Raleway", sans-serif; */
+}
+
+/* Default css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media screen  and (max-width: 576px) {
+    
+}
+
+@media screen and (min-width: 576)  and (max-width: 992px) {
+    
+}
+
