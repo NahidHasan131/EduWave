@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduWave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav id="navbar">
+            <div class="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <img src="./assets/logo.png" alt="EduWave">
+                <h1>EduWave</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="home">Home</a></li>
+                <li><a href="#about" class="about">About</a></li>
+                <li><a href="#facilities" class="facilities">Facilities</a></li>
+                <li><a href="#admission" class="admission">Admission</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="Primary-btn .home">Contact</button>
+            </div>
+        </nav>
 
-    
+        <div class="marquee">
+            <marquee behavior="" direction="">
+                <p>Inspiring Children from an Early Age to Dream Big and Work Towards Achieving Their Goals</p>
+            </marquee>
+        </div>
+
+        <section id="banner">
+
+        </section>
+    </header>
+
+    <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+    </script>
+
     
 </body>
 </html>
