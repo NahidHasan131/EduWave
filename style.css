@@ -11,14 +11,10 @@ body{
 
 /* Default css */
 header,main{
-    max-width: 1160px;
+    max-width: 1240px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
-
-
-
-
-
 
 
 /* Navabar */
@@ -26,7 +22,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0px;
+    padding: 25px 40px;
 }
 .logo{
     display: flex;
@@ -93,18 +89,144 @@ nav{
     font-size: 35px;
     font-weight: bold;
     text-transform: capitalize;
-    margin: 40px 0;
+    padding: 40px;
 }
 
+/* Banner Section */
+#banner{
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-content{
+    max-width: 570px;
+}
+.banner-content h2{
+    font-size: 48px;
+    line-height: 55px;
+}
+.banner-content p{
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.secondary-btn{
+    font-size: 16px;
+    border: none;
+    color: white;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px 35px;
+}
+.banner-img{
+    max-width: 450px;
+}
+.banner-img img{
+    width: 100%;
+}
 
+/* Curriculam */
+#curriculam{
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    background-position:  top center;
+    background-repeat: no-repeat;
+}
+.curriculam-title{
+    text-align: center;
+}
+.curriculam-title h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #0A0826;
+    padding: 60px 0;
+}
+.curriculam-items{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 40px;
+}
+.cItem{
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 0px 0px 39px #e7e7e7f5;
+    border-radius: 11px;
+}
+.card-1{
+    background: linear-gradient(0deg, rgb(255 255 255 / 80%) 60%, rgb(222 245 255 / 17%) 70%, rgb(0 212 255 / 15%) 100%);
+}
+.card-1 button{
+    color: #64C8FF;
+}
+.card-2 button{
+    color: #F0AA00;
+}
+.card-3 button{
+    color: #8700FF;
+}
+.card-2{
+    background: linear-gradient(0deg, rgb(255 255 255 / 80%) 60%, rgb(222 245 255 / 15%) 35%, rgb(255 244 220 / 100%) 100%);
+}
+.card-3{
+    background: linear-gradient(0deg, rgb(255 255 255 / 80%) 60%, rgb(222 245 255 / 0%) 45%, rgba(186, 135, 252, 0.3) 100%);
+}
+.cItem img{
+    max-width: 120px;
+}
+.cItem h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.cItem p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.cItem button{
+    font-size: 14px;
+    cursor: pointer; 
+    background-color: white;   
+    font-weight: 500;
+    border: none;
+}
+#curriculam .icon{
+    margin: 60px 0;
+    text-align: center;
+}
+.icon span{
+    color: white;
+    background-color: #FEA301;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 22px;
+    margin-right: 4px;
+}
 
-
-
-
-
-
-
-
+/* Stories */
+#stories_bg{
+    background-image: url('./assets/bg.png');
+    background-size: cover;
+    background-position:  top center;
+    background-repeat: no-repeat;
+}
+.Stories-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.item-small{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
 
 
 
@@ -118,6 +240,7 @@ nav{
 
 /* Media queries */
 @media screen  and (max-width: 576px) {
+
     .mobile-menu{
         display: block;
     }
@@ -125,20 +248,172 @@ nav{
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 150px;
-        top: 70px;
+        width: 130px;
+        top: 100px;
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        text-align: center;
+        text-align: center;     
+        z-index: 10;
+    }
+    .nav-links a{
+        font-size: 16px;
     }
     .nav-links.show{
         display: flex;
     }
+
+    .logo{
+        flex-direction: column;
+        gap: 2px;
+    }
+    .logo h1{
+        font-size: 18px;
+    }
+    .logo img{
+        max-width: 35px;
+        max-height: 35px;
+    }
+    .Primary-btn{
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    .marquee{
+        font-size: 20px;
+        margin: 25px 0;
+    }
+
+    
+    /* Banner Section */
+    #banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content h2{
+        font-size: 30px;
+        line-height: 35px;
+        margin-top: 20px;
+    }
+    .banner-content p{
+        font-size: 14px;
+    }
+    .secondary-btn{
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    .banner-content{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    /* Curriculam */
+    .curriculam-title h2{
+        font-size: 30px;
+        padding: 40px 0;
+    }
+    .curriculam-items{
+        flex-direction: column-reverse;
+    }
+
+    .cItem img{
+        max-width: 100px;
+    }
+    .cItem h4{
+        font-size: 18px;
+    }
+    .cItem p{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .cItem button{
+        font-size: 14px;
+    }
+    #curriculam .icon{
+        margin: 40px 0;
+    }
+    .icon span{
+        font-size: 18px;
+    }
+
 }
 
-@media screen and (min-width: 576)  and (max-width: 992px) {
-    
+@media screen and (min-width: 576px)  and (max-width: 992px) {
+    nav{
+        padding: 20px 40px;
+    }
+    .logo{
+        gap: 3px;
+    }
+    .logo h1{
+        font-size: 22px;
+    }
+    .logo img{
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .nav-links{
+        gap: 15px;
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    .Primary-btn{
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    .marquee{
+        font-size: 25px;
+    }
+
+    /* Banner Section */
+
+    .banner-content h2{
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 40px;
+    }
+    .banner-content p{
+        font-size: 14px;
+    }
+    .secondary-btn{
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+        /* Curriculam */
+    .curriculam-title h2{
+        font-size: 30px;
+        padding: 40px 0;
+    }
+    .curriculam-items{
+        padding: 20px 40px;
+        gap: 20px;
+    }
+    .cItem{
+        padding: 30px 20px;
+    }
+    .cItem img{
+        max-width: 80px;
+    }
+    .cItem h4{
+        font-size: 16px;
+    }
+    .cItem p{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .cItem button{
+        font-size: 14px;
+    }
+    #curriculam .icon{
+        margin: 40px 0;
+    }
+    .icon span{
+        font-size: 18px;
+    }
+
+
+
+
 }
 
