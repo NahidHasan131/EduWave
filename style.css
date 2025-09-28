@@ -10,7 +10,7 @@ body{
 }
 
 /* Default css */
-header,main{
+header,main,.container{
     max-width: 1240px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -147,7 +147,7 @@ nav{
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    padding: 20px 40px;
+    padding: 20px 0 40px;
 }
 .cItem{
     padding: 50px 40px;
@@ -211,6 +211,10 @@ nav{
 
 /* Stories */
 #stories_bg{
+    background: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(250 250 76 / 7%) 35%, rgb(254 163 1 / 30%) 100%);
+}
+.container{
+    padding: 0 60px 40px;
     background-image: url('./assets/bg.png');
     background-size: cover;
     background-position:  top center;
@@ -225,15 +229,83 @@ nav{
 .item-small{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+    gap: 15px;
 }
-
-
-
-
-
-
-
+.big-img{
+    max-width: 540px;
+}
+.big-img img{
+    width: 100%;
+}
+.Stories-1, .Stories{
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.big-img img, .Stories img{
+    border-radius: 10px 10px 0 0;
+}
+.story-content{
+    padding: 20px 35px;
+}
+.story-content1{
+    padding: 35px;
+}
+.storybtn button, .storybtn1 button{
+    color: #fff;
+    background-color: #95B226;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+}
+.btn2color button{
+    background-color: #5D58F0;
+}
+.storybtn1{
+    position: absolute;
+    top: 292px;
+    left: 40px;
+}
+.storybtn1 button{   
+    background-color: #3CD8E8;
+}
+.storybtn {
+    position: absolute;
+    top: 162px;
+    left: 40px;
+}
+.story-content1 h4{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+.story-content1 p{
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+    font-weight: 500;
+}
+.story-content h4{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.Stories-btn{
+    text-align: center;
+    margin: 60px 0 auto;
+}
+.Stories-btn button{
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 10px;
+}
 
 
 
@@ -313,6 +385,7 @@ nav{
     }
     .curriculam-items{
         flex-direction: column-reverse;
+        padding: 0 40px;
     }
 
     .cItem img{
@@ -333,6 +406,17 @@ nav{
     }
     .icon span{
         font-size: 18px;
+    }
+
+    /* Stories */
+    .item-big{
+        display: none;
+    }
+    .item-small{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Stories img{
+        width: 312px;
     }
 
 }
@@ -412,8 +496,10 @@ nav{
         font-size: 18px;
     }
 
-
-
+    /* Stories */
+    .Stories-items{
+        flex-direction: column;
+    }
 
 }
 
